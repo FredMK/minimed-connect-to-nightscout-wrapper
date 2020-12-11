@@ -14,7 +14,7 @@
     "npm": "^6.4.1"
   },
   "dependencies": {
-    "minimed-connect-to-nightscout": "FredMK/minimed-connect-to-nightscout#axios",
-    "dotenv": "*"
+    "dotenv": "*",
+    "minimed-connect-to-nightscout": "github:FredMK/minimed-connect-to-nightscout#axios"
   }
 }
