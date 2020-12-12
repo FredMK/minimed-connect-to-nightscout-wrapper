@@ -11,6 +11,11 @@ function readEnv(key, defaultVal) {
       // Azure prefixes environment variables with this
       process.env['CUSTOMCONNSTR_' + key] ||
       process.env['CUSTOMCONNSTR_' + key.toLowerCase()];
+
+  if (val === 'true') val = true;
+  if (val === 'false') val = false;
+  if (val === 'null') val = null;
+
   return val !== undefined ? val : defaultVal;
 }
 
@@ -22,7 +27,7 @@ let config = {
   nsSecret: readEnv('API_SECRET'),
   sgvLimit: 24,
   maxRetryDuration: 1,
-  verbose: !readEnv('CARELINK_QUIET'),
+  verbose: !readEnv('CARELINK_QUIET', true),
   deviceInterval: 5.1 * 60 * 1000,
 };
 
