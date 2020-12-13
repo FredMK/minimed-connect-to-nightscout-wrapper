@@ -1,8 +1,8 @@
-This is a wrapper for mmconnect Nightscout plugin, to make it possible running it on your computer. 
+This is a wrapper for mmconnect Nightscout plugin, to make it possible running it on your computer.
 
 
 # Install
-0. On your running Nightscout setup remove the `mmconnect` from `ENABLE` variable (disables the mmconnect)
+0. On your running Nightscout setup remove the `mmconnect` from `ENABLE` variable (disables the mmconnect). This is mandatory, because if more than one system is logging in to Carelink, the system will not work, and you will get 401 errors.
 1. Install Node.js
 2. Clone this repo to a folder
 3. Rename `.env.example` to `.env` and set the values (Environment variables can be used instead of .env file, like in Nightscout. The names are the same as in the .env.example file.)
